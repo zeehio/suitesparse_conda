@@ -1,0 +1,27 @@
+package:
+  name: suitesparse
+  version: 4.2.1
+
+source:
+  fn: SuiteSparse-4.2.1.tar.gz
+  url: http://faculty.cse.tamu.edu/davis/SuiteSparse/SuiteSparse-4.2.1.tar.gz
+  md5: 4628df9eeae10ae5f0c486f1ac982fce
+  patches:
+    - build_so.patch
+
+build:
+  number: 1
+
+requirements:
+  build:
+    - openblas
+    - lapack
+
+  run:
+    - openblas
+    - lapack
+
+about:
+  home: http://faculty.cse.tamu.edu/davis/suitesparse.html
+  license: GPL-2+
+
