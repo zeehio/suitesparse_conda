@@ -11,6 +11,7 @@ install:
   - conda config --set always_yes true
 
 script:
+  - conda config --add channels zeehio
   - conda build .
 
 build_targets:
